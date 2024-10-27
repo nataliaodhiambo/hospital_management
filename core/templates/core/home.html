@@ -4,23 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            color: #333;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            color: #4a4a4a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 { 
+            color: #6a5acd;
+            margin-top: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #4169e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #1e90ff;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <div class = "container">
         <h1>Welcome to Our Hospital Management System</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="{% url 'doctor_list' %}">Doctors</a></li>
-            <li><a href="{% url 'patient_list' %}">Patients</a></li>
-            <li><a href="{% url 'appointment_list' %}">Appointments</a></li>
-        </ul>
-    </nav>
-    <main>
         <p>This system allows you to manage doctors, patients and appointments efficiently.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Hospital Management System</p>
-    </footer>
+
+        <h2>Our Services</h2>
+        <ul>
+            <li>Manage Doctors: View and manage our team of expert healthcare professionals</li>
+            <li>Patient Records: Access and update patient information securely and efficiently</li>
+            <li>Schedule Appointments: Easily book and track appointments for seamless healthcare delivery</li>
+        </ul>
+
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="{% url 'doctor_list' %}>Doctors</a></li>
+            <li><a href="{% url 'patient_list' %}>Patients</a></li>
+            <li><a href="{% url 'appointment_list' %}>Appointments</a></li>
+        </ul>
+
+        <div class = "footer">
+            <p>&copy; 2024 Hospital Management System. All rights reserved.</p>
+        </div>
+    </div>  
 </body>
 </html>

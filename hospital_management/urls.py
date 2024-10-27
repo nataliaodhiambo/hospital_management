@@ -18,12 +18,8 @@ from django.contrib import admin
 from django.urls import path
 from core import views
 
-from django.contrib import admin
-from django.urls import path
-from core import views
-
 urlpatterns = [
-    path('', views.home, name='home'),  # Add this line
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('doctors/', views.DoctorListView.as_view(), name='doctor_list'),
     path('patients/', views.PatientListView.as_view(), name='patient_list'),
@@ -31,4 +27,3 @@ urlpatterns = [
     path('appointments/create/', views.AppointmentCreateView.as_view(), name='appointment_create'),
     path('appointments/<int:pk>/complete/', views.AppointmentCompleteView.as_view(), name='appointment_complete'),
 ]
-    

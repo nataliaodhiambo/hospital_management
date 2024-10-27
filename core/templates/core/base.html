@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hospital Management{% endblock %}</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        header{
+            background-color: #4682b4;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        main{
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+        footer{
+            background-color: white;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4682b4;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/patients">Patients</a></li>
+                <li><a href="/doctors">Doctors</a></li>
+                <li><a href="/appointments">Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2020 Hospital Management</p>
+    </footer>
+</body>
+</html>

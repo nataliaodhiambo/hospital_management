@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Hospital Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'doctor_list' %}">Doctors</a></li>
+            <li><a href="{% url 'patient_list' %}">Patients</a></li>
+            <li><a href="{% url 'appointment_list' %}">Appointments</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>This system allows you to manage doctors, patients and appointments efficiently.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hospital Management System</p>
+    </footer>
+</body>
+</html>

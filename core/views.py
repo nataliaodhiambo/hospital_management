@@ -4,6 +4,9 @@ from .models import Doctor, Patient, Appointment
 from .forms import AppointmentForm
 
 # Create your views here.
+def home(request):
+    return render(request, 'core/home.html')
+
 class DoctorListView(View):
     def get(self, request):
         doctors = Doctor.objects.all()
